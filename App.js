@@ -11,20 +11,11 @@ import Feed from './screens/Feed';
 import Profile from './screens/Profile';
 import Search from './screens/Search';
 import Notifications from './screens/Notifications';
+import Chats from './screens/Chats';
+import Search_product from './screens/Search_product';
+import Edit_profile from './screens/Edit_profile';
 
 const Stack = createStackNavigator();
-const Drawer = createDrawerNavigator();
-
-function Nav_drawer({ navigation }) {
-  return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Feed" component={Feed}/>
-      <Drawer.Screen name="Search" component={Search}/>
-      <Drawer.Screen name="Notifications" component={Notifications}/>
-      <Drawer.Screen name="Profile" component={Profile}/>
-    </Drawer.Navigator>
-  );
-}
 
 export default class App extends Component {
   render() {
@@ -36,7 +27,13 @@ export default class App extends Component {
           <Stack.Screen name="VerifyAccount" component={VerifyAccount} options={{ headerShown: false }} />
           <Stack.Screen name="RecoveryMail" component={RecoveryMail} />
           <Stack.Screen name="ChangePassword" component={ChangePassword} options={{ headerShown: false }} />
-          <Stack.Screen name="Drawer" component={Nav_drawer} options={{ headerShown: false }}/>
+          <Stack.Screen name="Chats" component={Chats} options={{ headerShown: false }} />
+          <Stack.Screen name="Feed" component={Feed} options={{ headerShown: false }} />
+          <Stack.Screen name="Search" component={Search} options={{ headerShown: false }} />
+          <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: false }} />
+          <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
+          <Stack.Screen name="Search_product" component={Search_product} options={{ headerShown: false }} />
+          <Stack.Screen name="Edit_profile" component={Edit_profile} options={{ headerShown: false }} />
         </Stack.Navigator>
       </NavigationContainer>
     );

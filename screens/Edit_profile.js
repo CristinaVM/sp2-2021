@@ -2,23 +2,19 @@ import React from 'react';
 import { Image } from 'react-native';
 import { Container, Text, Button, Icon, Footer, FooterTab, Badge, Header, Content, Card, CardItem, Thumbnail, Left, Right, Body, Title } from 'native-base';
 
-export default function Profile({ navigation }) {
+export default function Edit_profile({ navigation }) {
   return (
     <Container>
       <Header style={{ backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e7e7e7', borderTopLeftRadius: 1, borderStyle: 'solid' }}>
         <Left style={{ flex: 1 }}>
           <Button transparent>
-            <Icon name="pencil-sharp" style={{ color: '#202251' }} onPress={() => navigation.navigate('Edit_profile')} />
+            <Icon name="pencil-sharp" style={{ color: '#202251' }} onPress={() => navigation.goBack()} />
           </Button>
         </Left>
         <Body style={{ flex: 1 }}>
           <Title style={{ color: '#202251', alignSelf: 'center' }}>Perfil</Title>
         </Body>
-        <Right style={{ flex: 1 }} >
-          <Button transparent>
-            <Icon name="power-sharp" style={{ color: '#202251' }} onPress={() => navigation.navigate('Login')} />
-          </Button>
-        </Right>
+        <Right />
       </Header>
 
       <Content style={{ padding: 5, backgroundColor: '#fff' }}>
