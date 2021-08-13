@@ -41,7 +41,7 @@ export default function Profile({ navigation }) {
             <Left style={{ flex: 0.15, alignSelf: 'flex-start' }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 0.55, marginLeft: 8 }}>
+            <Body style={{ flex: 0.55, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Pedido #A28401</Text>
               </Text>
@@ -63,7 +63,7 @@ export default function Profile({ navigation }) {
       <Footer>
         <FooterTab style={{ backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e7e7e7', borderTopLeftRadius: 1, borderStyle: 'solid' }}>
           <Button vertical onPress={() => navigation.navigate('Feed')}>
-            <Icon name="home" style={{ color: '#D8B7A8' }} />
+            <Icon name="home-sharp" style={{ color: '#D8B7A8' }} />
           </Button>
           <Button vertical onPress={() => navigation.navigate('Search')}>
             <Icon name="search" style={{ color: '#D8B7A8' }} />

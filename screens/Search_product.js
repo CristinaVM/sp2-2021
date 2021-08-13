@@ -10,7 +10,7 @@ export default function Search_product({ navigation }) {
       <Header searchBar rounded style={{backgroundColor:'#ffffff' }}>
         <Left style={{ flex: 0.25 }}>
           <Button transparent>
-            <Icon name="arrow-back" style={{ color: '#D8B7A8' }} onPress={() => navigation.goBack()} />
+            <Icon name="arrow-back" style={{ color: '#202251' }} onPress={() => navigation.goBack()} />
           </Button>
         </Left>
         <Body style={{ flex: 1.75 }}>

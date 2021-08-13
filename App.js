@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
 import Login from './screens/Login';
 import Register from './screens/Register';
 import VerifyAccount from './screens/VerifyAccount';
@@ -14,6 +13,8 @@ import Notifications from './screens/Notifications';
 import Chats from './screens/Chats';
 import Search_product from './screens/Search_product';
 import Edit_profile from './screens/Edit_profile';
+import Product from './screens/Product';
+import Pruebas from './screens/Pruebas';
 
 const Stack = createStackNavigator();
 
@@ -34,6 +35,8 @@ export default class App extends Component {
           <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }} />
           <Stack.Screen name="Search_product" component={Search_product} options={{ headerShown: false }} />
           <Stack.Screen name="Edit_profile" component={Edit_profile} options={{ headerShown: false }} />
+          <Stack.Screen name="Product" component={Product} options={{ headerShown: false }} />
+          {/* <Stack.Screen name="Pruebas" component={Pruebas} options={{ headerShown: false }} /> */}
         </Stack.Navigator>
       </NavigationContainer>
     );

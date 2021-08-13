@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Dimensions, Image } from 'react-native';
+import { Dimensions, Image, Touchable, TouchableOpacity } from 'react-native';
 import Carousel from 'react-native-anchor-carousel';
 import { Container, Text, Button, Icon, Footer, FooterTab, Badge, Header, Content, Form, Item, Input, Card, CardItem, Thumbnail, Left, Right, Body, Title, Fab, View } from 'native-base';
 
@@ -7,6 +7,7 @@ const usuario = 'Nombre Apellido'
 const {width: windowWidth} = Dimensions.get('window');
 const ITEM_WIDTH = 0.4 * windowWidth;
 const SEPARATOR_WIDTH = 10;
+
 const data = [
   { id: 'item1', image: 'https://i.imgur.com/s7GgEa8.jpg' },
   { id: 'item2', image: 'https://i.imgur.com/N3nQ9CS.jpg' },
@@ -34,7 +35,9 @@ export default function Feed({ navigation }) {
     const {image} = item;
     return (
       <View>
-        <Image source={{uri: image}} style={{ width: '100%', aspectRatio: 1, borderRadius: 15, marginLeft: 5, marginRight: 5 }} />
+        <TouchableOpacity onPress={() => navigation.navigate('Product')}>
+          <Image source={{uri: image}} style={{ width: '100%', aspectRatio: 1, borderRadius: 15, marginLeft: 5, marginRight: 5 }} />
+        </TouchableOpacity>
       </View>
     );
   }
@@ -43,7 +46,9 @@ export default function Feed({ navigation }) {
     const {image} = item;
     return (
       <View>
-        <Image source={{uri: image}} style={{ width: '100%', aspectRatio: 1, borderRadius: 15, marginLeft: 5, marginRight: 5 }} />
+        <TouchableOpacity>
+          <Image source={{uri: image}} style={{ width: '100%', aspectRatio: 1, borderRadius: 15, marginLeft: 5, marginRight: 5 }} />
+        </TouchableOpacity>
       </View>
     );
   }
@@ -54,11 +59,6 @@ export default function Feed({ navigation }) {
         <Body style={{ flex: 7, marginLeft: 5 }}>
           <Title style={{ color: '#202251' }}>Hola! {usuario}</Title>
         </Body>
-        {/* <Right style={{ flex: 1 }}>
-          <Button transparent>
-            <Icon name="chatbox-ellipses" style={{ color: '#202251' }} onPress={() => navigation.navigate('Chats')} />
-          </Button>
-        </Right> */}
       </Header>
 
       <Content style={{ padding: 5 }}>

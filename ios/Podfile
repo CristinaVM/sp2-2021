@@ -12,6 +12,10 @@ target 'Proyecto' do
     :hermes_enabled => false
   )
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  pod 'RNCPicker', :path => '../node_modules/@react-native-picker/picker'
+
   target 'ProyectoTests' do
     inherit! :complete
     # Pods for testing

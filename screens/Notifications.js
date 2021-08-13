@@ -6,15 +6,15 @@ export default function Notifications({ navigation }) {
   return (
     <Container>
       <Header style={{ backgroundColor: '#ffffff', borderWidth: 1, borderColor: '#e7e7e7', borderTopLeftRadius: 1, borderStyle: 'solid' }}>
-        <Left style={{ flex: 1 }}>
+        <Left style={{ flex: 0.15 }}>
           <Button transparent>
-            <Icon name="arrow-back" style={{ color: '#D8B7A8' }} onPress={() => navigation.goBack()} />
+            <Icon name="arrow-back" style={{ color: '#202251' }} onPress={() => navigation.goBack()} />
           </Button>
         </Left>
-        <Body style={{ flex: 1 }}>
+        <Body style={{ flex: 0.7 }}>
           <Title style={{ color: '#202251', alignSelf: 'center' }}>Notificaciones</Title>
         </Body>
-        <Right style={{ flex: 1 }} />
+        <Right style={{ flex: 0.15 }} />
       </Header>
 
       <Content style={{ padding: 3, backgroundColor: '#f7f7f7' }}>
@@ -23,7 +23,7 @@ export default function Notifications({ navigation }) {
             <Left style={{ flex: 0.3 }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 1.5, marginLeft: 8 }}>
+            <Body style={{ flex: 1.5, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Tu pedido de Tienda se ha actualizado al estado En Espera</Text>
               </Text>
@@ -40,7 +40,7 @@ export default function Notifications({ navigation }) {
             <Left style={{ flex: 0.3 }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 1.5, marginLeft: 8 }}>
+            <Body style={{ flex: 1.5, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Tu pedido de Tienda se ha actualizado al estado Aprobado</Text>
               </Text>
@@ -57,7 +57,7 @@ export default function Notifications({ navigation }) {
             <Left style={{ flex: 0.3 }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 1.5, marginLeft: 8 }}>
+            <Body style={{ flex: 1.5, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Tu pedido de Tienda se ha actualizado al estado Empacado</Text>
               </Text>
@@ -74,7 +74,7 @@ export default function Notifications({ navigation }) {
             <Left style={{ flex: 0.3 }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 1.5, marginLeft: 8 }}>
+            <Body style={{ flex: 1.5, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Tu pedido de Tienda se ha actualizado al estado En Camino</Text>
               </Text>
@@ -91,7 +91,7 @@ export default function Notifications({ navigation }) {
             <Left style={{ flex: 0.3 }}>
               <Thumbnail square source={require('../img/profile.jpg')} style={{ borderRadius: 15 }} />
             </Left>
-            <Body style={{ flex: 1.5, marginLeft: 8 }}>
+            <Body style={{ flex: 1.5, marginLeft: 15 }}>
               <Text>
                 <Text style={{ fontWeight: "bold" }}>Tu pedido de Tienda se ha actualizado al estado Completado</Text>
               </Text>

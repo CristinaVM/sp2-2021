@@ -6,7 +6,7 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import moment from "moment";
 import firebase from 'firebase';
 
-export default function Register() {
+export default function Pruebas() {
   const firebaseConfig = {
     apiKey: "AIzaSyDfMPRT40qvC-XTDrtDl13T2E4XRYzb0dQ",
     authDomain: "deivy-f6e2f.firebaseapp.com",
